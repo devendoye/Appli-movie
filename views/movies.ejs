@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="../public/style.css">
+
+</head>
+<body>
+<h1><%= title %></h1>
+<div>
+<%  for (movie of movies) {%>
+<div><p><%= movie.title %></p><p><%= movie.year %></p></div>
+    <% } %>
+</div>
+</body>
+</html>
