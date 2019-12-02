@@ -10,8 +10,17 @@
 <h1><%= title %></h1>
 <div>
 <%  for (movie of movies) {%>
-<div><p><%= movie.title %></p><p><%= movie.year %></p></div>
+<div><%= movie.title %><br><%= movie.year %></div>
     <% } %>
+</div>
+<div>
+<form action="/movies" method="POST">
+<label for="titlemovie">Titlemovie</label>
+<input type="text" name="titlemovie" id="titlemovie">
+<label for="yearmovie">Yearmovie</label>
+<input type="text" name="yearmovie" id="yearmovie">
+<button>ajouter</button>
+</form>
 </div>
 </body>
 </html>

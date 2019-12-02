@@ -1,10 +1,12 @@
 const express = require('express')
+const bodyparser = require('body-parser')
 const app = express()
 PORT =  4000
 
 
 app.set('views','./views')
 app.set('view engine','ejs')
+app.use(bodyparser.urlencoded({ extended: false }))
 
 
 
@@ -26,6 +28,11 @@ app.get('/movies/:id',(req,res)=>
     res.render('movies-details', { moviesid : id})
 })
 
+app.post('/movies',(req,res) =>
+{
+    console.log(req.body)
+    res.sendStatus(201);
+})
 
 app.get('/',(req,res)=>
 {
